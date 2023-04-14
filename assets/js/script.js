@@ -58,15 +58,31 @@ function setTime() {
 
 // Access quesBank from seperate JavaScript
 // function accessQuestion() {
-//     console.log(questions[2]);
+//     var questionsEl = ""
+//     for (var i = 0; i < questions.length; i++){
+//         questionsEl = questions[i].title;
+//         console.log(questionsEl);
+//     }
 
 // }
+// accessQuestion()
 
+function accessChoices() {
+    var choicesEl = []
+    var questionsEl = ""
+    for (var i = 0; i < questions.length; i++) {
+        questionsEl = questions[i];
+        // console.log(questionsEl);
+        for (var j = 0; j < questionsEl.choices.length; j++) {
+            choicesEl = questionsEl.choices[j];
+            console.log(choicesEl);
+        }
+    }
+}
+accessChoices()
 // Access questions and multiple choices
 function disQuestion () {
 // Remove Main Page Content
-    // btn.remove();
-    // infoEl.remove();
     main.innerHTML = "";
 
     // Bank of question 
@@ -87,6 +103,7 @@ function disQuestion () {
     btn1.addEventListener("click", function(){ansKey()});
 }
 
+// Validate selected answer with actual answer and if wrong penalize 
 // Provide the Assessment or weather right or wrong and answer
 function ansKey() {
     if (pre.textContext == "one") {
@@ -98,7 +115,7 @@ function ansKey() {
     }
 }
 
-// Switch to new Question
+// Switch to new Question, provide pause
 
 
 // When timer reaches zero, collect users initals
