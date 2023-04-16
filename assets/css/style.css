@@ -2,33 +2,71 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex; 
+    justify-content: space-between;
+    padding: 20px;  
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 40px 20px 80px;
+}
+
 h1 {
     display: flex;
     justify-content: center;
     font-size: 40px;
     font-weight: bold;
-    margin: 40px 0 20px 0;
+    margin: 20px;
 }
 
 div {
+    text-align: center;
+}
+
+button#startQuiz  {
     display: flex;
+    padding: 5px 15px 5px 15px;
+    flex: 1 1 0;
     justify-content: center;
+    align-items: flex-start;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
 }
 
 button {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-items: center;
+    flex: 1 1 0;
     border: none;
-    margin: 20px;
-    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
     background-color: rgb(59, 7, 108);
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
 
-}
-
-button .startQuiz {
-    justify-content: center;
 }
 
 footer {
